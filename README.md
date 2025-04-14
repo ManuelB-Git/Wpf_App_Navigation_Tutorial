@@ -1,6 +1,38 @@
 # Wpf_App_Navigation_Tutorial
 
+Required NuGet Packages
+1.	CommunityToolkit.Mvvm - Provides MVVM support including ObservableObject, RelayCommand, and other MVVM utilities
+2.	Microsoft.Extensions.DependencyInjection - Provides dependency injection capabilities
+Installation Commands
+You can add these packages to your project using any of the following methods:
+Using Package Manager Console
+
+              Install-Package CommunityToolkit.Mvvm -Version 8.4.0
+              Install-Package Microsoft.Extensions.DependencyInjection -Version 9.0.4
+
+Using .NET CLI
+
+              dotnet add package CommunityToolkit.Mvvm --version 8.4.0
+              dotnet add package Microsoft.Extensions.DependencyInjection --version 9.0.4
+
+Using Visual Studio UI
+1.	Right-click on your project in Solution Explorer
+2.	Select Manage NuGet Packages
+3.	Search for and install:
+•	CommunityToolkit.Mvvm (version 8.4.0)
+•	Microsoft.Extensions.DependencyInjection (version 9.0.4)
+These packages provide the foundation for:
+•	MVVM architecture implementation with ObservableObject, [ObservableProperty], and [RelayCommand] attributes
+•	Dependency injection setup with ServiceCollection and BuildServiceProvider()
+•	Navigation service implementation
+Note that the project is using .NET 9 targeting Windows, so these package versions are compatible with that framework version.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 Introduction
+
 This document provides a comprehensive guide to implementing navigation in a WPF application using the MVVM (Model-View-ViewModel) pattern with dependency injection. The tutorial demonstrates a clean, maintainable approach to switching between different views in a WPF application.
 Architecture Overview
 The application uses:
