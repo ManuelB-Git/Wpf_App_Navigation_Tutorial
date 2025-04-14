@@ -13,7 +13,7 @@ namespace Wpf_App_Navigation_Tutorial.Services
     {
         private readonly Func<Type, ObservableObject> _viewModelFactory = viewModelFactory;
 
-        private ObservableObject _currentView = new HomeViewModel();
+        private ObservableObject _currentView = viewModelFactory.Invoke(typeof(HomeViewModel));
         public ObservableObject CurrentView
         {
             get => _currentView;

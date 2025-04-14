@@ -14,7 +14,7 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200" />
-            <!-- Set a fixed or proportional width -->
+            <!--  Set a fixed or proportional width  -->
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
@@ -24,34 +24,34 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
-                <!-- Spacer if needed -->
+                <!--  Spacer if needed  -->
             </Grid.RowDefinitions>
 
             <Label
                 Margin="10"
-                Content="{Binding Title}"
-                HorizontalAlignment="Left" />
+                HorizontalAlignment="Left"
+                Content="{Binding Title}" />
 
             <Button
                 Grid.Row="1"
                 Margin="10"
+                HorizontalAlignment="Stretch"
                 Command="{Binding NavigateToHomeCommand}"
-                Content="Home"
-                HorizontalAlignment="Stretch" />
+                Content="Home" />
 
             <Button
                 Grid.Row="2"
                 Margin="10"
+                HorizontalAlignment="Stretch"
                 Command="{Binding NavigateToSettingsCommand}"
-                Content="Settings"
-                HorizontalAlignment="Stretch" />
+                Content="Settings" />
         </Grid>
 
         <Border Grid.Column="1" Margin="10">
-            <ContentControl 
-                Content="{Binding NavigationService.CurrentView}"
+            <ContentControl
                 HorizontalAlignment="Stretch"
-                VerticalAlignment="Stretch" />
+                VerticalAlignment="Stretch"
+                Content="{Binding NavigationService.CurrentView}" />
         </Border>
     </Grid>
 </Window>
